@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,11 @@
 		8827D83A26B8617D00F6DE82 /* OpenMovieDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827D83926B8617D00F6DE82 /* OpenMovieDatabaseTests.swift */; };
 		8827D84526B8617D00F6DE82 /* OpenMovieDatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827D84426B8617D00F6DE82 /* OpenMovieDatabaseUITests.swift */; };
 		8827D85D26B93E7400F6DE82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8827D85C26B93E7400F6DE82 /* GoogleService-Info.plist */; };
+		88A61A1026B94E2D00994C33 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A0E26B94E2D00994C33 /* CustomTableViewCell.swift */; };
+		88A61A1126B94E2D00994C33 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A61A0F26B94E2D00994C33 /* CustomTableViewCell.xib */; };
+		88A61A1726B955A700994C33 /* UITableView+NibRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A1626B955A700994C33 /* UITableView+NibRegistering.swift */; };
+		88A61A1B26B9637100994C33 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A1926B9637100994C33 /* DetailViewController.swift */; };
+		88A61A1C26B9637100994C33 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A61A1A26B9637100994C33 /* DetailViewController.xib */; };
 		F6D397A28D0B34289490AA15 /* Pods_OpenMovieDatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB200E79C0FFCDF578B1846 /* Pods_OpenMovieDatabaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		8827D84426B8617D00F6DE82 /* OpenMovieDatabaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieDatabaseUITests.swift; sourceTree = "<group>"; };
 		8827D84626B8617D00F6DE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8827D85C26B93E7400F6DE82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88A61A0E26B94E2D00994C33 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		88A61A0F26B94E2D00994C33 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		88A61A1626B955A700994C33 /* UITableView+NibRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibRegistering.swift"; sourceTree = "<group>"; };
+		88A61A1926B9637100994C33 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		88A61A1A26B9637100994C33 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		8B72C18150BD01FF05DC5794 /* Pods_OpenMovieDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenMovieDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F05C1582DB9C79CFB84D2D /* Pods-OpenMovieDatabase-OpenMovieDatabaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMovieDatabase-OpenMovieDatabaseUITests.release.xcconfig"; path = "Target Support Files/Pods-OpenMovieDatabase-OpenMovieDatabaseUITests/Pods-OpenMovieDatabase-OpenMovieDatabaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BDC21CA821733C86DA16BCEA /* Pods_OpenMovieDatabase_OpenMovieDatabaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenMovieDatabase_OpenMovieDatabaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,8 +140,8 @@
 		8827D81E26B8617C00F6DE82 /* OpenMovieDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				88A61A1226B9552A00994C33 /* Swift */,
 				8827D82B26B8617D00F6DE82 /* Assets.xcassets */,
-				8827D85226B862C100F6DE82 /* Features */,
 				8827D83026B8617D00F6DE82 /* Info.plist */,
 				8827D85C26B93E7400F6DE82 /* GoogleService-Info.plist */,
 				8827D82826B8617C00F6DE82 /* OpenMovieDatabase.xcdatamodeld */,
@@ -170,6 +180,7 @@
 		8827D85326B862C800F6DE82 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				88A61A0D26B94E0400994C33 /* View */,
 				8827D85B26B864CD00F6DE82 /* ViewController */,
 			);
 			path = Main;
@@ -178,6 +189,7 @@
 		8827D85426B862CD00F6DE82 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				88A61A1826B9635200994C33 /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -209,6 +221,57 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		88A61A0D26B94E0400994C33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A0E26B94E2D00994C33 /* CustomTableViewCell.swift */,
+				88A61A0F26B94E2D00994C33 /* CustomTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88A61A1226B9552A00994C33 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A1426B9554800994C33 /* Common */,
+				8827D85226B862C100F6DE82 /* Features */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		88A61A1326B9553900994C33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A1526B9557300994C33 /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88A61A1426B9554800994C33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A1326B9553900994C33 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		88A61A1526B9557300994C33 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A1626B955A700994C33 /* UITableView+NibRegistering.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		88A61A1826B9635200994C33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A1926B9637100994C33 /* DetailViewController.swift */,
+				88A61A1A26B9637100994C33 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B6E182114B9E043AD977C245 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +282,6 @@
 				3D83DB74D5D2CA55AC8B1139 /* Pods-OpenMovieDatabaseTests.debug.xcconfig */,
 				831C0C6611FBEA8B0FE0E7FC /* Pods-OpenMovieDatabaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -332,8 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8827D82F26B8617D00F6DE82 /* LaunchScreen.storyboard in Resources */,
+				88A61A1C26B9637100994C33 /* DetailViewController.xib in Resources */,
 				8827D85D26B93E7400F6DE82 /* GoogleService-Info.plist in Resources */,
 				8827D82C26B8617D00F6DE82 /* Assets.xcassets in Resources */,
+				88A61A1126B94E2D00994C33 /* CustomTableViewCell.xib in Resources */,
 				8827D82726B8617C00F6DE82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,9 +527,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8827D82426B8617C00F6DE82 /* MainViewController.swift in Sources */,
+				88A61A1026B94E2D00994C33 /* CustomTableViewCell.swift in Sources */,
+				88A61A1726B955A700994C33 /* UITableView+NibRegistering.swift in Sources */,
 				8827D82A26B8617C00F6DE82 /* OpenMovieDatabase.xcdatamodeld in Sources */,
 				8827D82026B8617C00F6DE82 /* AppDelegate.swift in Sources */,
 				8827D82226B8617C00F6DE82 /* SceneDelegate.swift in Sources */,
+				88A61A1B26B9637100994C33 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

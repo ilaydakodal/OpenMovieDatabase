@@ -15,13 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OMDB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-Dh-0qv">
+                                <rect key="frame" x="16" y="52" width="120" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BU1-jw-UX9">
+                                <rect key="frame" x="0.0" y="159" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-u9-mtn">
+                                <rect key="frame" x="0.0" y="108" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JP5-u9-mtn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6oa-ej-0lc"/>
+                            <constraint firstItem="BU1-jw-UX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7jx-fi-ak5"/>
+                            <constraint firstItem="BU1-jw-UX9" firstAttribute="top" secondItem="JP5-u9-mtn" secondAttribute="bottom" id="DX8-W1-AnO"/>
+                            <constraint firstItem="JP5-u9-mtn" firstAttribute="top" secondItem="fpd-Dh-0qv" secondAttribute="bottom" constant="8" id="JBk-pm-88B"/>
+                            <constraint firstItem="fpd-Dh-0qv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="P9B-MD-0E9"/>
+                            <constraint firstItem="JP5-u9-mtn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yci-Rk-zJt"/>
+                            <constraint firstItem="BU1-jw-UX9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zuh-Vn-YW6"/>
+                            <constraint firstItem="fpd-Dh-0qv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jq9-xs-DZA"/>
+                            <constraint firstAttribute="bottom" secondItem="BU1-jw-UX9" secondAttribute="bottom" id="yVO-CT-Bz6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="BU1-jw-UX9" id="eH8-CJ-Ryf"/>
+                        <outlet property="mainViewSearchBar" destination="JP5-u9-mtn" id="eZL-Hk-N6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="80"/>
+            <point key="canvasLocation" x="15.942028985507248" y="79.6875"/>
         </scene>
     </scenes>
     <resources>
