@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseRemoteConfig
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        NetworkMonitor.shared.startMonitoring()
         FirebaseApp.configure()
+        getRemoteConfig()
+        
         return true
     }
 
@@ -78,6 +82,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func getRemoteConfig() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            if NetworkMonitor.shared.isConnected {
+                RemoteConfiguration.getRemoteConfig { (success, error) in
+                    if success{
+                        timer.invalidate()
+                    }
+                }
+            }
 
+        }
+    }
 }
 

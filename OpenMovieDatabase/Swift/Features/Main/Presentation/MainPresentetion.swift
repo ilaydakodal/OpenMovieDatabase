@@ -12,6 +12,8 @@ struct MoviePresentetion {
     let dateLabelText: String
     let posterImage: String
     let detailText: String
+    let imdbRankText: String
+    let genreText: String
 }
 
 struct MainPresentation {

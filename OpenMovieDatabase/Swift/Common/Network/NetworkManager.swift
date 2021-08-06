@@ -5,7 +5,7 @@
 //  Created by Ilayda Kodal on 8/3/21.
 //
 
-import Foundation
+import Firebase
 import UIKit
 
 final class NetworkManager {
@@ -14,13 +14,14 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     private let cache = NSCache<NSString, NSData>()
+    var movies = [MovieResponse]()
     
     public func getData<T: Decodable>(url: URL?, completion: @escaping ((NetworkResult<T>) -> Void)) {
         guard let url = url else {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { (data,response,error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 completion(.failure(.failedSession))
                 return
@@ -41,5 +42,11 @@ final class NetworkManager {
             }
         }
         task.resume()
+    }
+    
+    static func addLog(logName: String, movie: MovieResponse) {
+        Analytics.logEvent(logName, parameters: [
+            "imdbID": "\(movie.imdbID)" as NSObject,
+        ])
     }
 }

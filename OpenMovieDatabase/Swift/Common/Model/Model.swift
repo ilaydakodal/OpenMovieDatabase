@@ -20,6 +20,7 @@ struct Search: Codable {
         case response = "Response"
         case error = "Error"
     }
+}
     
     struct Movie: Codable {
         let title: String
@@ -36,7 +37,6 @@ struct Search: Codable {
             case poster = "Poster"
         }
     }
-}
 
 //MARK: - Movie
 struct MovieResponse: Codable {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l9u-f2-Dpv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f1K-vZ-zOu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BU1-jw-UX9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BU1-jw-UX9">
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -39,6 +39,56 @@
             </objects>
             <point key="canvasLocation" x="926.08695652173924" y="79.6875"/>
         </scene>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="tIp-BI-mS5">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="f1K-vZ-zOu" customClass="SplashScreenViewController" customModule="OpenMovieDatabase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZFV-D3-Pir">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RME-0D-J9G">
+                                <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gv-7V-jNp">
+                                <rect key="frame" x="172.5" y="397" width="69" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" red="0.23137254901960785" green="0.68235294117647061" blue="0.75294117647058822" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JEh-0R-xZ9">
+                                <rect key="frame" x="127" y="228" width="160" height="159"/>
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="awa-a8-e2o"/>
+                                    <constraint firstAttribute="height" constant="160" id="uU2-po-Yu9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lb7-uh-AnZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RME-0D-J9G" firstAttribute="top" secondItem="2gv-7V-jNp" secondAttribute="bottom" constant="20" id="DtC-Sb-QsH"/>
+                            <constraint firstItem="2gv-7V-jNp" firstAttribute="top" secondItem="JEh-0R-xZ9" secondAttribute="bottom" constant="8" id="Jdy-ZB-VeJ"/>
+                            <constraint firstItem="2gv-7V-jNp" firstAttribute="centerX" secondItem="lb7-uh-AnZ" secondAttribute="centerX" id="Q37-Nd-0IL"/>
+                            <constraint firstItem="RME-0D-J9G" firstAttribute="centerX" secondItem="lb7-uh-AnZ" secondAttribute="centerX" id="fUc-II-Bar"/>
+                            <constraint firstItem="JEh-0R-xZ9" firstAttribute="centerX" secondItem="2gv-7V-jNp" secondAttribute="centerX" id="jH6-kK-oiJ"/>
+                            <constraint firstItem="RME-0D-J9G" firstAttribute="centerY" secondItem="lb7-uh-AnZ" secondAttribute="centerY" id="pNT-Fr-Pbr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashImageView" destination="JEh-0R-xZ9" id="ftf-85-HUu"/>
+                        <outlet property="splashLogoLabel" destination="2gv-7V-jNp" id="dhM-7n-WB1"/>
+                        <segue destination="l9u-f2-Dpv" kind="presentation" identifier="mainPage" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UcF-2x-f87"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbI-SG-phT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007.2463768115942" y="-192.1875"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2x-Yy-5U5">
             <objects>
@@ -47,6 +97,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="10e-Od-x8X">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.23137254900000001" green="0.68235294120000001" blue="0.75294117650000003" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -59,6 +112,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="wifi.slash" catalog="system" width="128" height="108"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

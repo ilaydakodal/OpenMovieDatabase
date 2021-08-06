@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 class MainViewModel {
     
@@ -29,10 +30,11 @@ class MainViewModel {
     }
     
     func handleResponse(_ response: MovieResponse) {
-        let detaiPresentation = MoviePresentetion(nameLabelText: response.title, dateLabelText: response.released, posterImage: response.poster, detailText: response.plot )
+        NetworkManager.addLog(logName: "log_", movie: response)
+        let detaiPresentation = MoviePresentetion(nameLabelText: response.title, dateLabelText: response.released, posterImage: response.poster, detailText: response.plot, imdbRankText: response.imdbRating, genreText: response.genre)
         
         var listPresentation: [MoviePresentetion] = []
-        listPresentation.append(MoviePresentetion(nameLabelText: response.title, dateLabelText: response.released, posterImage: response.poster, detailText: response.plot))
+        listPresentation.append(MoviePresentetion(nameLabelText: response.title, dateLabelText: response.released, posterImage: response.poster, detailText: response.plot, imdbRankText: response.imdbRating, genreText: response.genre))
         
         let mainPresentation = MainPresentation(detailPresentation: detaiPresentation, listPresentation: listPresentation)
         

@@ -16,6 +16,7 @@ class MainViewController: UIViewController, UISearchResultsUpdating {
     private lazy var cell = CustomTableViewCell()
     fileprivate var searchText: String?
     let searchController = UISearchController()
+    var movies = [MovieResponse]()
     
     var viewModel: MainViewModel!
     
@@ -24,7 +25,7 @@ class MainViewController: UIViewController, UISearchResultsUpdating {
         bindViewModel()
         configureView()
     }
-    
+
     func configureView() {
         title = "OMDB"
         mainTableView.registerNibCell(CustomTableViewCell.self)
@@ -35,16 +36,20 @@ class MainViewController: UIViewController, UISearchResultsUpdating {
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let movie = searchController.searchBar.text  {
+        if let movie = searchController.searchBar.text {
             guard movie.count > 2 else {return}
             self.searchText = movie
             searchController.searchBar.isLoading = true
+            //showSpinner()
             viewModel.fetchMovie(movie: movie)
             DispatchQueue.main.async {
                 searchController.searchBar.isLoading = false
+                //self.stopSpinner()
                 print(movie)
             }
-            mainTableView.reloadData()
+        }
+        if NetworkMonitor.shared.isConnected == false {
+            presentWarningAlert("No internet Connection")
         }
     }
 }
@@ -66,7 +71,7 @@ extension MainViewController {
             listPresentation = presentation.listPresentation
             detailPresentation = presentation.detailPresentation
             if let image = URL.urlForMovieApi(movie: presentation.detailPresentation.posterImage) {
-                self.cell.customCellImageView?.setImageFromURL(url: image)
+                self.cell.customCellImageView?.load(url: image)
                 self.cell.customCellImageView?.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
                 self.cell.customCellImageView?.layer.cornerRadius = 10
             }

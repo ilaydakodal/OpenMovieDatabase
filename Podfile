@@ -8,6 +8,7 @@ target 'OpenMovieDatabase' do
   # Pods for OpenMovieDatabase
   pod 'Firebase/Analytics'
   pod 'Firebase/RemoteConfig'
+  pod 'NVActivityIndicatorView'
 
 
 # add pods for any other desired Firebase products

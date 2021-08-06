@@ -11,11 +11,16 @@ extension URL {
     static func urlForMovieApi(movie: String) -> URL! {
         return URL(string: ApiKey.baseURL + ApiKey.search + "=\(movie)&apikey=" + ApiKey.key)
     }
+    
+    static func urlForPosterApi() -> URL! {
+        return URL(string: ApiKey.posterURL + "/?apikey=" + ApiKey.key + "&")
+    }
 }
 
 struct ApiKey {
     //http://www.omdbapi.com/?i=tt3896198&apikey=8ee98341
     static let baseURL = "http://www.omdbapi.com"
+    static let posterURL = "http://img.omdbapi.com"
     static let search = "/?t"
     static let key = "8ee98341"
 }
