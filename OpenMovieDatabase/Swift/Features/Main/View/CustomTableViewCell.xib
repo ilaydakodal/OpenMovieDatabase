@@ -16,22 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sparkles" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-Rn-AAx">
-                        <rect key="frame" x="16" y="7" width="85" height="86"/>
-                        <color key="tintColor" red="0.99096256490000001" green="0.63339006900000006" blue="0.2899209559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="film" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-Rn-AAx">
+                        <rect key="frame" x="16" y="9" width="85" height="82.5"/>
+                        <color key="tintColor" red="1" green="0.018814657639999999" blue="0.1094669678" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="85" id="OdQ-Kq-4hd"/>
                             <constraint firstAttribute="width" constant="85" id="xdd-kD-kLt"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 Jun 1989" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bi3-4D-cOu">
-                        <rect key="frame" x="109" y="57" width="66" height="17"/>
+                        <rect key="frame" x="109" y="49" width="66" height="17"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="py9-EP-Jyp">
-                        <rect key="frame" x="109" y="8" width="83.5" height="41"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="py9-EP-Jyp">
+                        <rect key="frame" x="109" y="8" width="203" height="41"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,12 +40,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="6w1-Rn-AAx" secondAttribute="bottom" constant="8" id="1RZ-kF-A9g"/>
-                    <constraint firstItem="Bi3-4D-cOu" firstAttribute="top" secondItem="py9-EP-Jyp" secondAttribute="bottom" constant="8" id="8iI-sj-aFP"/>
+                    <constraint firstItem="Bi3-4D-cOu" firstAttribute="top" secondItem="py9-EP-Jyp" secondAttribute="bottom" id="8iI-sj-aFP"/>
                     <constraint firstItem="py9-EP-Jyp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Fgd-68-Qdd"/>
                     <constraint firstItem="Bi3-4D-cOu" firstAttribute="leading" secondItem="py9-EP-Jyp" secondAttribute="leading" id="L28-ah-f69"/>
                     <constraint firstItem="6w1-Rn-AAx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="g0y-kx-0hb"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Bi3-4D-cOu" secondAttribute="bottom" constant="8" id="jw6-MC-Mqi"/>
                     <constraint firstItem="6w1-Rn-AAx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="p1g-Qp-AJW"/>
                     <constraint firstItem="py9-EP-Jyp" firstAttribute="leading" secondItem="6w1-Rn-AAx" secondAttribute="trailing" constant="8" id="uqG-QB-coc"/>
+                    <constraint firstAttribute="trailing" secondItem="py9-EP-Jyp" secondAttribute="trailing" constant="8" id="xk2-Ld-B6d"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -53,10 +56,10 @@
                 <outlet property="dateLabel" destination="Bi3-4D-cOu" id="eYx-WV-NLG"/>
                 <outlet property="nameLabel" destination="py9-EP-Jyp" id="5kQ-y0-8tk"/>
             </connections>
-            <point key="canvasLocation" x="60.869565217391312" y="90.066964285714278"/>
+            <point key="canvasLocation" x="-72" y="77"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="sparkles" catalog="system" width="112" height="128"/>
+        <image name="film" catalog="system" width="128" height="93"/>
     </resources>
 </document>

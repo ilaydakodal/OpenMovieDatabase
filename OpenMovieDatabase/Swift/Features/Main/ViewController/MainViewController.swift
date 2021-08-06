@@ -7,21 +7,73 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UISearchResultsUpdating {
     
-    @IBOutlet weak var mainViewSearchBar: UISearchBar!
     @IBOutlet weak var mainTableView: UITableView!
+    
+    private var listPresentation: [MoviePresentetion] = []
+    private var detailPresentation: MoviePresentetion?
+    private lazy var cell = CustomTableViewCell()
+    fileprivate var searchText: String?
+    let searchController = UISearchController()
+    
+    var viewModel: MainViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
         configureView()
     }
     
     func configureView() {
+        title = "OMDB"
         mainTableView.registerNibCell(CustomTableViewCell.self)
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        mainViewSearchBar.backgroundImage = UIImage()
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let movie = searchController.searchBar.text  {
+            guard movie.count > 2 else {return}
+            self.searchText = movie
+            searchController.searchBar.isLoading = true
+            viewModel.fetchMovie(movie: movie)
+            DispatchQueue.main.async {
+                searchController.searchBar.isLoading = false
+                print(movie)
+            }
+            mainTableView.reloadData()
+        }
+    }
+}
+
+extension MainViewController {
+    
+    func bindViewModel() {
+        viewModel = MainViewModel()
+        viewModel.changeHandler = { [weak self] change in
+            DispatchQueue.main.async {
+                self?.applyChange(change)
+            }
+        }
+    }
+    
+    func applyChange(_ change: MainViewModel.Change) {
+        switch change {
+        case .presentation(let presentation):
+            listPresentation = presentation.listPresentation
+            detailPresentation = presentation.detailPresentation
+            if let image = URL.urlForMovieApi(movie: presentation.detailPresentation.posterImage) {
+                self.cell.customCellImageView?.setImageFromURL(url: image)
+                self.cell.customCellImageView?.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+                self.cell.customCellImageView?.layer.cornerRadius = 10
+            }
+            mainTableView.reloadData()
+        case .alert(let message):
+            print(message)
+        }
     }
 }
 
@@ -30,12 +82,18 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //Will be implemented later
-        8
+        listPresentation.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail = DetailViewController()
+        self.present(detail, animated: true, completion: nil)
+        detail.fill(presentation: detailPresentation!)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeCell(indexPath, type: CustomTableViewCell.self)
+        cell.fill(presentation: listPresentation[indexPath.row])
         return cell
     }
 }

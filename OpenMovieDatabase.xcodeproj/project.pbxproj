@@ -19,11 +19,19 @@
 		8827D83A26B8617D00F6DE82 /* OpenMovieDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827D83926B8617D00F6DE82 /* OpenMovieDatabaseTests.swift */; };
 		8827D84526B8617D00F6DE82 /* OpenMovieDatabaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8827D84426B8617D00F6DE82 /* OpenMovieDatabaseUITests.swift */; };
 		8827D85D26B93E7400F6DE82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8827D85C26B93E7400F6DE82 /* GoogleService-Info.plist */; };
+		8833704526BA9E5600022DC3 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833704426BA9E5600022DC3 /* UISearchBar+Extension.swift */; };
+		8833704926BAC28600022DC3 /* UIImage+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833704826BAC28600022DC3 /* UIImage+URL.swift */; };
 		88A61A1026B94E2D00994C33 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A0E26B94E2D00994C33 /* CustomTableViewCell.swift */; };
 		88A61A1126B94E2D00994C33 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A61A0F26B94E2D00994C33 /* CustomTableViewCell.xib */; };
 		88A61A1726B955A700994C33 /* UITableView+NibRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A1626B955A700994C33 /* UITableView+NibRegistering.swift */; };
 		88A61A1B26B9637100994C33 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A1926B9637100994C33 /* DetailViewController.swift */; };
 		88A61A1C26B9637100994C33 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A61A1A26B9637100994C33 /* DetailViewController.xib */; };
+		88A61A1F26B968BE00994C33 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A1E26B968BE00994C33 /* NetworkManager.swift */; };
+		88A61A2226B968DF00994C33 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A2126B968DF00994C33 /* ErrorResponse.swift */; };
+		88A61A2426B9690C00994C33 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A2326B9690C00994C33 /* Config.swift */; };
+		88A61A2726B9696F00994C33 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A61A2626B9696F00994C33 /* Model.swift */; };
+		88EF866026B9BC97001522E0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF865F26B9BC97001522E0 /* MainViewModel.swift */; };
+		88EF866326B9BCD8001522E0 /* MainPresentetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF866226B9BCD8001522E0 /* MainPresentetion.swift */; };
 		F6D397A28D0B34289490AA15 /* Pods_OpenMovieDatabaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB200E79C0FFCDF578B1846 /* Pods_OpenMovieDatabaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,11 +73,19 @@
 		8827D84426B8617D00F6DE82 /* OpenMovieDatabaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMovieDatabaseUITests.swift; sourceTree = "<group>"; };
 		8827D84626B8617D00F6DE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8827D85C26B93E7400F6DE82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8833704426BA9E5600022DC3 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
+		8833704826BAC28600022DC3 /* UIImage+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+URL.swift"; sourceTree = "<group>"; };
 		88A61A0E26B94E2D00994C33 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		88A61A0F26B94E2D00994C33 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		88A61A1626B955A700994C33 /* UITableView+NibRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibRegistering.swift"; sourceTree = "<group>"; };
 		88A61A1926B9637100994C33 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		88A61A1A26B9637100994C33 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		88A61A1E26B968BE00994C33 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		88A61A2126B968DF00994C33 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		88A61A2326B9690C00994C33 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		88A61A2626B9696F00994C33 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		88EF865F26B9BC97001522E0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		88EF866226B9BCD8001522E0 /* MainPresentetion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresentetion.swift; sourceTree = "<group>"; };
 		8B72C18150BD01FF05DC5794 /* Pods_OpenMovieDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenMovieDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F05C1582DB9C79CFB84D2D /* Pods-OpenMovieDatabase-OpenMovieDatabaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMovieDatabase-OpenMovieDatabaseUITests.release.xcconfig"; path = "Target Support Files/Pods-OpenMovieDatabase-OpenMovieDatabaseUITests/Pods-OpenMovieDatabase-OpenMovieDatabaseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BDC21CA821733C86DA16BCEA /* Pods_OpenMovieDatabase_OpenMovieDatabaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenMovieDatabase_OpenMovieDatabaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,8 +196,10 @@
 		8827D85326B862C800F6DE82 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				88EF866126B9BCC3001522E0 /* Presentation */,
 				88A61A0D26B94E0400994C33 /* View */,
 				8827D85B26B864CD00F6DE82 /* ViewController */,
+				88EF865E26B9BC77001522E0 /* ViewModel */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -251,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				88A61A1326B9553900994C33 /* Extensions */,
+				88A61A2526B9695900994C33 /* Model */,
+				88A61A1D26B9677500994C33 /* Network */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -259,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				88A61A1626B955A700994C33 /* UITableView+NibRegistering.swift */,
+				8833704426BA9E5600022DC3 /* UISearchBar+Extension.swift */,
+				8833704826BAC28600022DC3 /* UIImage+URL.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -270,6 +292,40 @@
 				88A61A1A26B9637100994C33 /* DetailViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		88A61A1D26B9677500994C33 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A2326B9690C00994C33 /* Config.swift */,
+				88A61A2126B968DF00994C33 /* ErrorResponse.swift */,
+				88A61A1E26B968BE00994C33 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		88A61A2526B9695900994C33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88A61A2626B9696F00994C33 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88EF865E26B9BC77001522E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88EF865F26B9BC97001522E0 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88EF866126B9BCC3001522E0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				88EF866226B9BCD8001522E0 /* MainPresentetion.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		B6E182114B9E043AD977C245 /* Pods */ = {
@@ -528,11 +584,19 @@
 			files = (
 				8827D82426B8617C00F6DE82 /* MainViewController.swift in Sources */,
 				88A61A1026B94E2D00994C33 /* CustomTableViewCell.swift in Sources */,
+				88EF866326B9BCD8001522E0 /* MainPresentetion.swift in Sources */,
 				88A61A1726B955A700994C33 /* UITableView+NibRegistering.swift in Sources */,
 				8827D82A26B8617C00F6DE82 /* OpenMovieDatabase.xcdatamodeld in Sources */,
+				88A61A1F26B968BE00994C33 /* NetworkManager.swift in Sources */,
 				8827D82026B8617C00F6DE82 /* AppDelegate.swift in Sources */,
+				88A61A2226B968DF00994C33 /* ErrorResponse.swift in Sources */,
+				88A61A2426B9690C00994C33 /* Config.swift in Sources */,
+				88A61A2726B9696F00994C33 /* Model.swift in Sources */,
 				8827D82226B8617C00F6DE82 /* SceneDelegate.swift in Sources */,
 				88A61A1B26B9637100994C33 /* DetailViewController.swift in Sources */,
+				8833704926BAC28600022DC3 /* UIImage+URL.swift in Sources */,
+				88EF866026B9BC97001522E0 /* MainViewModel.swift in Sources */,
+				8833704526BA9E5600022DC3 /* UISearchBar+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
