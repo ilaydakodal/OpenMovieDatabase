@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkMonitor.shared.startMonitoring()
         FirebaseApp.configure()
         getRemoteConfig()
-        
         return true
     }
 
@@ -69,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {

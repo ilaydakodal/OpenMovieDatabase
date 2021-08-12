@@ -36,6 +36,7 @@ class MainViewController: UIViewController, UISearchResultsUpdating {
     }
     
     func updateSearchResults(for searchController: UISearchController) {
+        
         if let movie = searchController.searchBar.text {
             guard movie.count > 2 else {return}
             self.searchText = movie
@@ -49,7 +50,7 @@ class MainViewController: UIViewController, UISearchResultsUpdating {
             }
         }
         if NetworkMonitor.shared.isConnected == false {
-            presentWarningAlert("No internet Connection")
+           presentWarningAlert("No internet Connection")
         }
     }
 }

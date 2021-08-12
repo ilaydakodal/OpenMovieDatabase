@@ -29,7 +29,7 @@ final class NetworkMonitor {
     public func startMonitoring() {
         monitor.start(queue: queue)
         monitor.pathUpdateHandler = { [weak self] path in
-            print(self?.isConnected)
+            print(self?.isConnected ?? "")
             self?.isConnected = path.status == .satisfied
             self?.getConnectionType(path)
         }

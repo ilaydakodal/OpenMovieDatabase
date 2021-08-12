@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIViewController{
+extension UIViewController {
     
     func presentWarningAlert(_ message: String) {
         let alertController = UIAlertController(title: "Oops!",
